@@ -1,0 +1,114 @@
+#/////////////////////////////////////////////////////////////////////////////
+# Fireball Projects
+#/////////////////////////////////////////////////////////////////////////////
+
+library/
+temp/
+local/
+build/
+node_modules/
+
+#/////////////////////////////////////////////////////////////////////////////
+# Logs and databases
+#/////////////////////////////////////////////////////////////////////////////
+
+*.log
+*.sql
+*.sqlite
+
+#/////////////////////////////////////////////////////////////////////////////
+# files for debugger
+#/////////////////////////////////////////////////////////////////////////////
+
+*.sln
+*.csproj
+*.pidb
+*.unityproj
+*.suo
+*.pyc
+*.apk
+
+#/////////////////////////////////////////////////////////////////////////////
+# OS generated files
+#/////////////////////////////////////////////////////////////////////////////
+
+.DS_Store
+ehthumbs.db
+Thumbs.db
+
+#/////////////////////////////////////////////////////////////////////////////
+# exvim files
+#/////////////////////////////////////////////////////////////////////////////
+
+*UnityVS.meta
+*.err
+*.err.meta
+*.exvim
+*.exvim.meta
+*.vimentry
+*.vimentry.meta
+*.vimproject
+*.vimproject.meta
+.vimfiles.*/
+.exvim.*/
+quick_gen_project_*_autogen.bat
+quick_gen_project_*_autogen.bat.meta
+quick_gen_project_*_autogen.sh
+quick_gen_project_*_autogen.sh.meta
+.exvim.app
+
+#/////////////////////////////////////////////////////////////////////////////
+# webstorm files
+#/////////////////////////////////////////////////////////////////////////////
+
+.idea/
+*.iml
+
+#//////////////////////////
+# VS Code
+#//////////////////////////
+
+.vscode/
+*.code-workspace
+
+#/////////////////////////
+# test
+#/////////////////////////
+
+/assets/test/
+/assets/test.meta
+/assets/resources/project.manifest
+/assets/resources/project.manifest.meta
+/assets/resources/config.json
+/assets/resources/config.json.meta
+
+#/////////////////////////
+# build
+#/////////////////////////
+
+/build-1.9.0/jsb-default/main.js
+/build-1.9.0/jsb-default/src/
+/build-1.9.0/jsb-default/res/
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.win32/
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.android/
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.android-studio/app/assets/
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.android-studio/app/.externalNativeBuild/
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.android-studio/app/libs/armeabi-v7a/gdb.setup
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.android-studio/app/libs/armeabi-v7a/gdbserver
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.android-studio/app/libs/armeabi-v7a/libcocos2djs.so
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.android-studio/app/libs/armeabi/gdb.setup
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.android-studio/app/libs/armeabi/gdbserver
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.android-studio/app/libs/armeabi/libcocos2djs.so
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.android-studio/app/bugly/
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.android-studio/app/debug/
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.android-studio/app/release/
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.ios_mac/quanlai_shandong.xcodeproj/xcuserdata/
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.ios_mac/quanlai_shandong.xcworkspace/xcuserdata
+/build-1.9.0/jsb-default/frameworks/cocos2d-x/cocos/scripting/js-bindings/proj.ios_mac/cocos2d_js_bindings.xcodeproj/xcuserdata/
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.ios_mac/Pods/
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.ios_mac/Podfile.lock
+/build-1.9.0/jsb-default/publish/
+/build-1.9.0/jsb-default/frameworks/cocos2d-x/tools/simulator/libsimulator/proj.ios_mac/libsimulator.xcodeproj/xcuserdata/
+/build-1.9.0/jsb-default/frameworks/cocos2d-x/tools/tojs/userconf.ini
+/build-1.9.0/jsb-default/frameworks/runtime-src/proj.android-studio/app/local.properties
+/build-1.9.0/jsb-default/js backups (useful for debugging)/
