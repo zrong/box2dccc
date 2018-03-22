@@ -1,26 +1,23 @@
-// Learn TypeScript:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/typescript.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
-// Learn Attribute:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
-
 const {ccclass, property} = cc._decorator;
+import Main from './main'
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class Test extends cc.Component {
 
-    pm:cc.PhysicsManager = null
+    main:Main = null
 
     constructor() {
       super();
-      this.pm = cc.director.getPhysicsManager() 
     }
 
-    onLoad () { }
+    initTest(main) {
+      this.main = main
+      this.main.setting.addDebugText(this.node.name + '\n')
+    }
+
+    onLoad () {
+      // this.main.addDebugText(this.node.name)
+    }
 
     start () {
 

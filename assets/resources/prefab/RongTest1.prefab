@@ -117,7 +117,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 200,
+      "x": 813,
       "y": 300
     },
     "_skewX": 0,
@@ -135,17 +135,17 @@
       "__id__": 2
     },
     "_enabled": true,
-    "_type": 1,
+    "_type": 2,
     "_allowSleep": true,
     "_gravityScale": 1,
     "_linearDamping": 0,
     "_angularDamping": 0,
     "_linearVelocity": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": -100,
+      "y": 600
     },
-    "_angularVelocity": 0,
+    "_angularVelocity": 90,
     "_fixedRotation": true,
     "enabledContactListener": false,
     "bullet": false
@@ -251,7 +251,7 @@
       "__id__": 6
     },
     "_enabled": true,
-    "_type": 2,
+    "_type": 0,
     "_allowSleep": true,
     "_gravityScale": 1,
     "_linearDamping": 0,
@@ -367,17 +367,17 @@
       "__id__": 10
     },
     "_enabled": true,
-    "_type": 0,
+    "_type": 1,
     "_allowSleep": true,
     "_gravityScale": 1,
     "_linearDamping": 0,
     "_angularDamping": 0,
     "_linearVelocity": {
       "__type__": "cc.Vec2",
-      "x": 0,
+      "x": 32,
       "y": 0
     },
-    "_angularVelocity": 0,
+    "_angularVelocity": 360,
     "_fixedRotation": false,
     "enabledContactListener": false,
     "bullet": false
