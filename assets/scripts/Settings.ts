@@ -3,14 +3,34 @@ import Test from './Test'
 export default class Settings {
 
   private _debugTextStrings:Array<string> = []
-  private _currentPrefabName:string = null
   private _currentTest:Test = null
+
+  private _prefabNames:Array<object> = []
 
   public paused:boolean = false
   public singleStep:boolean = false
+  public currentTestIndex:number = null
 
   constructor() {
 
+  }
+
+  public set prefabNames(jsList) {
+    for (let jsFile of jsList) {
+      let index:number = jsFile.lastIndexOf('assets/scripts/tests/')
+      if (index > -1) {
+        let jsSplit:Array<string> = jsFile.split('/')
+        let jsName:string = jsSplit[jsSplit.length-1]
+        let mainName:string = jsName.slice(0, jsName.length-3)
+        let prefabName:string = 'prefab/tests/' + mainName
+        this._prefabNames.push({index: this._prefabNames.length, mainName, jsName, prefabName, jsFile})
+      }
+    }
+    cc.log('prefabNames', this._prefabNames)
+  }
+
+  public get prefabNames() {
+    return this._prefabNames
   }
 
   public get currentTest() {
@@ -19,14 +39,6 @@ export default class Settings {
 
   public set currentTest(test:Test) {
     this._currentTest = test
-  }
-
-  public get currentPrefabName() {
-    return this._currentPrefabName
-  }
-
-  public set currentPrefabName(prefabName:string) {
-    this._currentPrefabName = prefabName
   }
 
   public clearDebugText() {

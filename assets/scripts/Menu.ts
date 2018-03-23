@@ -10,11 +10,46 @@ export default class Menu extends cc.Component {
   @property(cc.Node)
   stepBtnNode:cc.Node = null
 
+  @property(cc.Node)
+  scrollContent:cc.Node = null
+
+  @property(cc.Node)
+  scrollView:cc.Node = null
+
+  @property(cc.Node)
+  scrollItemTPL:cc.Node = null
+
   main:Main = null
 
   initMenu(main) {
     this.main = main
     this._updatePause()
+    this._buildScrollContent()
+  }
+
+  private _buildScrollContent() {
+    let initX:number = 6
+    let initY:number = -6
+    for (let i=0; i<this.main.setting.prefabNames.length; i++) {
+      let prefabInfo:object = this.main.setting.prefabNames[i]
+      let btnNode:cc.Node = cc.instantiate(this.scrollItemTPL)
+      btnNode.active = true
+      btnNode.name = prefabInfo.mainName
+      btnNode.x = initX
+      btnNode.y = initY - i * 35
+      btnNode.getChildByName('Label').getComponent(cc.Label).string = prefabInfo.mainName
+
+      var clickEventHandler = new cc.Component.EventHandler();
+      clickEventHandler.target = this.node
+      clickEventHandler.component = "Menu"
+      clickEventHandler.handler = "onTestSelect"
+      clickEventHandler.customEventData = i.toString()
+
+      let btnScript:cc.Button = btnNode.getComponent(cc.Button)
+      btnScript.clickEvents.push(clickEventHandler);
+      cc.log(btnNode.name)
+      this.scrollContent.addChild(btnNode)
+    }
   }
 
   onLoad () {
@@ -22,8 +57,9 @@ export default class Menu extends cc.Component {
     cc.systemEvent.on(cc.SystemEvent.EventType.KEY_UP, this.onKeyUp, this);
   }
 
-  start () {
-
+  onTestSelect(evt:cc.Event.EventCustom, customEventData) {
+    this.onSelectATestClick(null)
+    this.main.loadTest(Number.parseInt(customEventData))
   }
 
   onKeyUp(evt:cc.Event) {
@@ -36,6 +72,10 @@ export default class Menu extends cc.Component {
     else if(evt.keyCode === cc.KEY.o) {
       this.onStep(null)
     }
+  }
+
+  onSelectATestClick(evt:cc.Event.EventCustom) {
+    this.scrollView.active = !this.scrollView.active
   }
 
   onDebugDrawChecked(evt:cc.Event.EventCustom, customEventData:string) {
