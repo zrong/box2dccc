@@ -1,8 +1,12 @@
+/**
+ * see http://www.iforce2d.net/b2dtut/bodies
+ */
+
 const {ccclass, property} = cc._decorator;
-import Test from './Test'
+import Test from '../Test'
 
 @ccclass
-export default class RongTest1 extends Test { 
+export default class CCCBodies extends Test { 
 
   @property(cc.Node)
   dynamicBody: cc.Node = null
@@ -20,6 +24,4 @@ export default class RongTest1 extends Test {
 
   start () {
   }
-
-  // update (dt) {}
 }

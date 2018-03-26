@@ -1,5 +1,5 @@
 const {ccclass, property} = cc._decorator;
-import Main from './main'
+import Main from './Main'
 
 @ccclass
 export default class Test extends cc.Component {
